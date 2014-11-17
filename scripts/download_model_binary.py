@@ -34,6 +34,7 @@ def parse_readme_frontmatter(dirname):
     top = lines.index('---')
     bottom = lines[top + 1:].index('---')
     frontmatter = yaml.load('\n'.join(lines[top + 1:bottom]))
+    print frontmatter
     assert all(key in frontmatter for key in required_keys)
     return dirname, frontmatter
 

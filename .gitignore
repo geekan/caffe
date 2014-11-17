@@ -1,4 +1,6 @@
 ## General
+*.ipynb
+.DS_Store
 
 # Compiled Object files
 *.slo

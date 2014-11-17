@@ -31,12 +31,14 @@ CUDA_ARCH := -gencode arch=compute_20,code=sm_20 \
 # atlas for ATLAS (default)
 # mkl for MKL
 # open for OpenBlas
-BLAS := atlas
+BLAS := open
 # Custom (MKL/ATLAS/OpenBLAS) include and lib directories.
 # Leave commented to accept the defaults for your choice of BLAS
 # (which should work)!
 # BLAS_INCLUDE := /path/to/your/blas
 # BLAS_LIB := /path/to/your/blas
+BLAS_INCLUDE := /usr/local/Cellar/openblas/0.2.12/include
+BLAS_LIB := /usr/local/Cellar/openblas/0.2.12/lib
 
 # This is required only if you will compile the matlab interface.
 # MATLAB directory should contain the mex binary in /bin.
